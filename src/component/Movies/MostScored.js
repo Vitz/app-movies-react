@@ -1,14 +1,14 @@
 import React from 'react';
 import MoviesList from './MoviesList';
 
-class TopScored extends React.Component{
+class MostScored extends React.Component{
   state = {
     movies: [{"img":"https://placehold.it/400x200&text=Other new movie"},{"img":"https://placehold.it/400x200&text=Other movie"},{"img":"https://placehold.it/400x200&text=Other movie"}],
     limit:6 
   }
 
   componentDidMount() {
-      fetch('http://django-rest-api-imdb.herokuapp.com/movies/?format=json&limit='+ this.props.limit +'&sort=-rating_avg', {  
+      fetch('http://django-rest-api-imdb.herokuapp.com/movies/?format=json&limit='+ this.props.limit +'&sort=-rating_amount', {  
       method: 'GET'
       })
     .then(res => res.json())
@@ -27,4 +27,4 @@ class TopScored extends React.Component{
   }
 }
 
-export default TopScored;
+export default MostScored;

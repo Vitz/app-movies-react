@@ -10,6 +10,7 @@ import {
   Redirect,
   Switch
 } from 'react-router-dom';
+import Player from './component/Player';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Switch>
             <Route exact path="/" component={Home}/>
             <Route exact path="/top100" component={Top100}/>
+            <Route path="/watch" component={Player}/>
             <Route exact path="/404" component={Eror404} />
             <Redirect from='*' to="/404" /> 
         </Switch>

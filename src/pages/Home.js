@@ -1,15 +1,17 @@
 import React from 'react'
 import Main from '../component/Main'
-import TopScored from '../component/Movies/TopScored'
+import TopRating from '../component/Movies/TopRating'
+import MostScored from '../component/Movies/MostScored'
+import LastAdded from '../component/Movies/LastAdded';
 
 class Home extends React.Component {
     render() {
         return (
             <div className="container">
                 <Main/>
-                <TopScored name="Top Scored" limit="6" />
-                <TopScored name="Top Watched" limit="6"  />
-                <TopScored name="Last Added" limit="6" />
+                <MostScored name="Popular" limit="6"  />
+                <LastAdded name="Last Added" limit="6" />
+                <TopRating name="Top Scored" limit="6" />
             </div>
 
         )
