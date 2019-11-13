@@ -8,9 +8,9 @@ class Top100 extends React.Component{
     {
         return(
             <div className="container">
-                <LastAdded name="Last Added"  limit="33"/>
-                <TopRating name="Top Scored" limit="33"/>
-                <MostScored name="Most rated" limit="33" />
+                <LastAdded name="Last Added"  limit={this.props.limit} category={this.props.category}/>
+                <TopRating name="Top Scored" limit={this.props.limit} category={this.props.category}/>
+                <MostScored name="Most rated" limit={this.props.limit}  category={this.props.category}/>
             </div>
         )
     }

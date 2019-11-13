@@ -8,7 +8,7 @@ class TopRating extends React.Component{
   }
 
   componentDidMount() {
-      fetch('http://django-rest-api-imdb.herokuapp.com/movies/?format=json&limit='+ this.props.limit +'&sort=-rating_avg', {  
+      fetch('http://django-rest-api-imdb.herokuapp.com/movies/?format=json&genre='+this.props.category+'&limit='+ this.props.limit +'&sort=-rating_avg', {  
       method: 'GET'
       })
     .then(res => res.json())

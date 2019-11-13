@@ -11,6 +11,7 @@ import {
   Switch
 } from 'react-router-dom';
 import Player from './component/Player';
+import Vip from './pages/Vip';
 
 function App() {
   return (
@@ -19,7 +20,14 @@ function App() {
       <Router>
         <Switch>
             <Route exact path="/" component={Home}/>
-            <Route exact path="/top100" component={Top100}/>
+            <Route exact path="/top100"   component={(props) => <Top100 limit="36" category={""} />}/>
+            <Route exact path="/Action" component={(props) => <Top100 limit="12" category={"Action"} />}/>
+            <Route exact path="/Comedy" component={(props) => <Top100 limit="12" category={"Comedy"} />}/>
+            <Route exact path="/Crime" component={(props) => <Top100 limit="12" category={"Crime"} />}/>
+            <Route exact path="/Drama" component={(props) => <Top100 limit="12" category={"Drama"} />}/>
+            <Route exact path="/Thriller"  component={(props) => <Top100 limit="12" category={"Thriller"} />}/>
+            <Route exact path="/Horror" component={(props) => <Top100 limit="12" category={"Horror"} />}/>
+            <Route path="/vip"  component={Vip}/>
             <Route path="/watch" component={Player}/>
             <Route exact path="/404" component={Eror404} />
             <Redirect from='*' to="/404" /> 

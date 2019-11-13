@@ -9,9 +9,9 @@ class Home extends React.Component {
         return (
             <div className="container">
                 <Main/>
-                <MostScored name="Popular" limit="6"  />
-                <LastAdded name="Last Added" limit="6" />
-                <TopRating name="Top Scored" limit="6" />
+                <MostScored name="Popular" limit="6" category=""  />
+                <LastAdded name="Last Added" limit="6" category="" />
+                <TopRating name="Top Scored" limit="6" category="" />
             </div>
 
         )
