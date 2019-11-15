@@ -1,7 +1,7 @@
 
 import React from 'react';
 import './Movies.css'
-
+import $ from 'jquery'
 
 class Movie extends React.Component {
   buildStarRow(score) {
@@ -32,18 +32,31 @@ class Movie extends React.Component {
     )
   }
 
+  showStartIcon(elem) {
+    // document.getElementById(elem).classList.toggle("playOverlay");
+    // document.getElementById(elem).classList.toggle("overlay");
+    // document.getElementById(elem).classList.toggle("icon");
+    // $(elem).toggleClass("playOverlay")
+  }
 
 
   render() {
     return (
       <div className={this.props.className}>
         <div className="movie-box">
-          <p><img className="img-fluid border border-dark" src={this.props.src} alt={this.props.title} /></p>
+          <a href={"watch/" + this.props.movie_id}>
+            <div className="movie-cover">
+              <img id={"movie_img_" + this.props.movie_id} className="img-fluid border border-dark" onMouseLeave={(id) => this.showStartIcon("movie_img_" + this.props.movie_id)} onMouseEnter={(id) => this.showStartIcon("movie_img_" + this.props.movie_id)} src={this.props.src} alt={this.props.title} />
+              <div className="overlay img-fluid ">
+                  <i className="icon fa fa-play"></i>
+              </div>
+            </div>
+          </a>
           <div>
-            <div className="movie-title"><a href={"watch/"+ this.props.movie_id}>{this.props.title}</a></div>
+            <div className="movie-title"><a href={"watch/" + this.props.movie_id}>{this.props.title}</a></div>
 
             <div className="stars">
-            <h6>{this.props.score} ({this.props.rating_amount} ocen)</h6>
+              <h6>{this.props.score} ({this.props.rating_amount} ocen)</h6>
 
               {
                 this.buildStarRow(this.props.score)

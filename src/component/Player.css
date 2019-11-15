@@ -2,5 +2,16 @@
 font-size: 10px;
 align-content: center;
 text-align: center;
+background-color: rgba(29, 24, 24, 0.993);
+color:  white;
+line-height: 4px;
+}
 
+.list-group-item-dark{
+    color:  white;
+    background-color: black;
+}
+
+.video-bg{
+    background-color: black;
 }

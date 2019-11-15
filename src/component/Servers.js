@@ -13,7 +13,7 @@ class Servers extends React.Component {
       <div>
         <ul className="list-group">{
           links.map(function (link, idLink) {
-            return (<li className="list-group-item list-group-item-secondary"><SingleServer link={link.link} type={link.type} key={idLink}/></li>)
+            return (<li key={idLink} className="list-group-item list-group-item-secondary"><SingleServer link={link.link} type={link.type}/></li>)
           })}
         </ul>
       </div>
