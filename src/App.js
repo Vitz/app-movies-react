@@ -12,6 +12,7 @@ import {
 } from 'react-router-dom';
 import Player from './component/Player';
 import Vip from './pages/Vip';
+import Movies from './pages/Movies';
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
             <Route exact path="/Drama" component={(props) => <Top100 limit="12" category={"Drama"} />}/>
             <Route exact path="/Thriller"  component={(props) => <Top100 limit="12" category={"Thriller"} />}/>
             <Route exact path="/Horror" component={(props) => <Top100 limit="12" category={"Horror"} />}/>
+            <Route path="/movies"  component={Movies}/>
             <Route path="/vip"  component={Vip}/>
             <Route path="/watch" component={Player}/>
             <Route exact path="/404" component={Eror404} />

@@ -36,7 +36,7 @@ class Vip extends React.Component {
                     </table>
                 </div>
 
-                <div className="col-sm-6 px-4">
+                <div className="col-sm-6 px-4 text-light border py-2">
                 <h2 >Wpisz kod</h2>
                     <p className="mt-2 content"> Wyślij SMS na numer, a następnie wpisz kod poniżej, 
                         aby doładować swoje konto:  </p>

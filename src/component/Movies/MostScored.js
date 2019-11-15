@@ -8,7 +8,7 @@ class MostScored extends React.Component{
   }
 
   componentDidMount() {
-      fetch('http://django-rest-api-imdb.herokuapp.com/movies/?format=json&genre='+this.props.category+'&limit='+ this.props.limit +'&sort=-rating_amount', {  
+      fetch('http://django-rest-api-imdb.herokuapp.com/movies/?format=json&genre='+this.props.category+'&limit='+ this.props.limit +'&ordering=-rating_amount', {  
       method: 'GET'
       })
     .then(res => res.json())

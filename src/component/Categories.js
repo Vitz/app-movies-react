@@ -7,7 +7,7 @@ class Categories extends React.Component {
       <div className="container my-4 ">
         <div className="row">
         <div className="col-sm-12">
-        <nav className="navbar navbar-expand-lg navbar-dark bg-secondary collapse justify-content-center ">
+        <nav className="navbar navbar-expand-lg navbar-dark  collapse justify-content-center topbar-genres">
         <ul className="navbar-nav">
                   <li className="nav-item px-md-4"><a className="nav-link nav-link-genre" href="/Action">Action</a></li>
                   <li className="nav-item px-md-4"><a className="nav-link nav-link-genre" href="/Comedy">Comedy</a></li>

@@ -32,13 +32,15 @@ class Movie extends React.Component {
     )
   }
 
+
+
   render() {
     return (
       <div className={this.props.className}>
         <div className="movie-box">
-          <p><img className="img-fluid" src={this.props.src} alt={this.props.title} /></p>
+          <p><img className="img-fluid border border-dark" src={this.props.src} alt={this.props.title} /></p>
           <div>
-            <div className="movie-title"><a href="watch/">{this.props.title}</a></div>
+            <div className="movie-title"><a href={"watch/"+ this.props.movie_id}>{this.props.title}</a></div>
 
             <div className="stars">
             <h6>{this.props.score} ({this.props.rating_amount} ocen)</h6>
