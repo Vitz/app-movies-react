@@ -1,4 +1,4 @@
-.list-group-item-secondary{
+.list-group-item-secondary  {
 font-size: 10px;
 align-content: center;
 text-align: center;
@@ -15,3 +15,55 @@ line-height: 4px;
 .video-bg{
     background-color: black;
 }
+
+.yt-title {
+    font-size: 21px;
+    padding: 10px;
+    color: white;
+    position: absolute;
+    width: 100%;
+    height: 60px;
+    top: 0px;
+    left: 0px;
+    background-color: black;
+  }
+
+  #video-div
+  {
+    display: block;
+
+  }
+
+  #video-sms
+  {
+      color: white;
+      background-color: black; 
+      position: absolute;
+      width: 50%;
+      height: 50%;
+      top: 25%;
+      left: 25%;
+      display: none;
+      text-align: center;
+
+  }
+
+
+  .form-sms{
+    margin: 15px;
+    display:inline-block;   
+    width:  250px;
+    position: absolute;
+    bottom: 0;
+    left: 25%;
+  }
+
+
+  .badge{
+    font-size: 10px;
+    margin: 2px;
+  }
+
+  .tags{
+    background-color: rgba(29, 24, 24, 0.993);
+  }

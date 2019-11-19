@@ -3,6 +3,7 @@ import './Player.css'
 import Movie from './Movies/Movie'
 import Servers from './Servers'
 import $ from 'jquery';
+import Tags from "../component/Tags"
 
 
 class Player extends React.Component {
@@ -28,11 +29,15 @@ class Player extends React.Component {
             })
             .catch(console.log)
     }
-    stopVid() {
-        console.log("asdasdas")
-        alert("yes")
 
 
+
+    loaded() {
+        setTimeout(() => {
+            $("#video").remove();
+            // $("#video-div").css("display", "none");
+            $("#video-sms").css("display", "block");
+        }, 10000);
     }
 
     render() {
@@ -41,12 +46,35 @@ class Player extends React.Component {
             <div>
                 <div className="row p-auto m-4">
                     <div className="col-sm-9 d-flex justify-content-center video-bg"  >
-                        <video onLoad={console.log.bind(this)} id="vid" className="img-fluid z-depth-1 " autoPlay loop controls muted>
-                            <source src="https://imdb-video.media-imdb.com/vi2508831257/1434659607842-pgv4ql-1540843135385.mp4?Expires=1573905091&Signature=vRVD~7ZQU4gtNS4G0PZI2PE0Cr5my2rIWigIc~CJ3z-KgaRJA6GHgCe6H6bSCvyxfN8BVb~nzVcAfLOhmVBHIRPwcsOXxZc4CSK8l8ylg5p9dOeZMYuk2Zm7jcmVyvT7WwFniSuJu6WQvNwIoOJsY7bhUoaMXw0yDJd-aAwnE17pKW8jEpxNJ1pCBxZLb5jYMNCPQmfEbN2kxbDdtCSQBDr6yXSMhAVZs5RRN6mvdMO48jWN-qBX31T2ezSqHdff1EYNOtjbFSYSIPWuD6njPL7ZkRZqf~gr5CjuoqwNpxkosylMw-ns00WnsfUbtlY2jFlgaRqTBSAAwzi-YPmTbQ__&Key-Pair-Id=APKAIFLZBVQZ24NQH3KA" type="video/mp4" />
-                        </video>
-                    </div>
+                        <div id="video-div" className="embed-responsive embed-responsive-16by9">
+                            <iframe id="video" onLoad={this.loaded} className="embed-responsive-item" src="https://www.youtube.com/embed/uYSo9vMrHjw?rel=0&autoplay=1&controls=0&modestbranding=0&fs=0&showinfo=0&version=3&enablejsapi=1" allowFullScreen></iframe>
+                            <div className="yt-title">{movie.title}</div>
+                        </div>
+                        <div id="video-sms" className="border p-2 my-2">
+                        Aby przejść dalej wyślij SMS na numer 6969 o treści xxx i wpisz kod poniżej (koszt 1,22zł)
+                       
+                       <div className= "sms-div">
+                        <form className="form-sms">
+                            <div className="form-group">
+                                <label for="code">Kod SMS</label>
+                                <input type="text" className="form-control" id="sms-code" placeholder="1234" />
+                            </div>
+                            <div className="form-group form-check">
+                                <input type="checkbox" className="form-check-input" id="accept" />
+                                <label className="form-check-label" for="accept">Akceptuje regulamin</label>
+                            </div>
+                            <button type="submit" className="btn btn-dark">Użyj kodu</button>
+                        </form>
+                        </div>
+                        </div>
+
+                    </div>                 
 
                     <div className="col-sm-3 ">
+
+                         <Tags />                        <br />
+
+
                         <ul className="list-group-item list-group-item-dark" >Sezon 1</ul>
                         <ul className="list-group border border-dark">
                             <li className="list-group-item list-group-item-secondary">Odcinek 1</li>
