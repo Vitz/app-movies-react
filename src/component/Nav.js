@@ -27,8 +27,8 @@ class Header extends React.Component {
           <li className="nav-item dropdown">
             <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Konto</a>
             <div className="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a className="dropdown-item" href="#">Login</a>
-              <a className="dropdown-item" href="#">Rejestracja</a>
+              <a className="dropdown-item" href="/login">Login</a>
+              <a className="dropdown-item" href="/register">Rejestracja</a>
             </div>
           </li>
         </ul>

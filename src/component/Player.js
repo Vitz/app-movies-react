@@ -52,7 +52,7 @@ class Player extends React.Component {
                         </div>
                         <div id="video-sms" className="border p-2 my-2">
                         Aby przejść dalej wyślij SMS na numer 6969 o treści xxx i wpisz kod poniżej (koszt 1,22zł)
-                       
+                        
                        <div className= "sms-div">
                         <form className="form-sms">
                             <div className="form-group">

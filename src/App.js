@@ -13,6 +13,8 @@ import {
 import Player from './component/Player';
 import Vip from './pages/Vip';
 import Movies from './pages/Movies';
+import Login from './component/User/Login'
+import Register from './component/User/Register'
 
 function App() {
   return (
@@ -31,6 +33,8 @@ function App() {
             <Route path="/movies"  component={Movies}/>
             <Route path="/vip"  component={Vip}/>
             <Route path="/watch" component={Player}/>
+            <Route path="/login" component={Login}/>
+            <Route path="/register" component={Register}/>
             <Route exact path="/404" component={Eror404} />
             <Redirect from='*' to="/404" /> 
         </Switch>
